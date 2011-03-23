@@ -103,7 +103,7 @@ public final class URL implements java.io.Serializable {
     public String filter(String url, String des) {
         String content;
         try {
-            InputStreamReader in = new InputStreamReader((InputStream) getContent());
+            InputStreamReader in = new InputStreamReader(openStream());
             BufferedReader buff = new BufferedReader(in);
             content = buff.readLine();
         } catch (Exception e) {
@@ -112,6 +112,7 @@ public final class URL implements java.io.Serializable {
         String res = "URL Hook: \"" + url + "\", Query: \"" + getQuery() + "\", Content: \"" + content + "\", Type: " + des;
         System.out.println(res);
         ContraUtil.log(res);
+        //Implement any logging/swapping/filtering here
         /*
         if (url.startsWith("https://impsoft.net/nexus/hashing.php")) {
             return "http://recoders.org/contra/misc/hashing.php";
