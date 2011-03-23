@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="ContraHook:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ContraHook_jar</output-path>
+    <root id="root">
+      <element id="archive" name="ContraHook.jar">
+        <element id="module-output" name="ContraHook" />
+      </element>
+    </root>
+  </artifact>
+</component>
